@@ -1,0 +1,74 @@
+# type help to get these examples
+# everything after a # is a comment
+i * i # i * i = -1
+2 - 3i # this is a complex number re = 2, imaginary = -3
+# the same number can be written as
+-i 3 + 2
+2 + (- 3j)
+(-I 3) - (-2) # imaginary tag can be i|j|I|J
+2;-3
+# NOTE that I3 or i3 or J3 etc. represent a variable,
+# but I 3 or i 3 or J 3 or j 3 is a complex number,
+# whereas 3I 3J 3i 3 i 3 J etc. are complex numbers
+#
+# an alternative is to specify a number by
+# module and argument as
+4,6 # here mod = 4, arg = 6 in radian degrees
+# note that argument is reduced inside [0, 2PI]
+# note that ; and , have highest precedence
+2;3*2 + 1 # equals (2;3)*2 + 1 = ((2+3i)*2)+1
+# one could write a full expression
+2 + j 4.2 + pi - 4,-6
+# pi is the constant pi=3.1415926...
+# another constant is e=2.7182818...
+#
+# to switch printing of results in short format use
+print
+# real number are a special case
+# last number is in scientific e format
+3 * 3.2 + (3 - 1) * 5 / 2.3e-4 # 2.3e-4 = 0.00023
+# some other expressions
+3 * (i 4 - 6) + 2,pi
+4 - 6j * 5 i - 7 / 2;3
+# to go back to long result format with global count use
+print
+#
+# supported functions: re(), im(), mod(), arg()
+re(2;3) # equals 2
+im(2 + i 3) # is 3 + 0i note 2 + i3 is an error
+mod(2,4) # is 2 + 0i
+arg(2,4) # is 4 + 0i converted in [-PI;PI] = -2.2831853072
+arg(1,pi) # is pi + 0i
+#
+# one could save a result in a variable
+set var1 = 200 - i 4000.456789 # defines and set var1
+set var2 = 3 + re(4,5) - mod(6j) # defines and set var2
+# variable names start with a letter and
+# contain letters and number only.
+# defined variables can then be used in expressions
+var1 + var2 - 5 + i
+set bb = var1 + var2 - 5 # or to set another variable
+#
+# to print the value of a variable use
+echo bb
+# to print a string use
+echo "a string"
+set var1= 2 + bb - var1 + 7 # reset var1
+#
+# to list all defined variables use
+list
+# to delete a defined variable use
+delete bb
+#
+# a full expression
+echo "The result of"
+echo "2 + re(4;6) - 5i * (5 - 2 / ( 5 - 7i) - e) - arg(i) + var1 - 3"
+echo "is:"
+2 + re(4;6) - 5i * (5 - 2 / ( 5 - 7i) - e) - arg(i) + var1 - 3
+#
+#to get a copyright message type:
+about
+# to quit the program use quit, or exit, or just q
+q
+# to have a look how expressions are evaluated
+# use -v command line option
