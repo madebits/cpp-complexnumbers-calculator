@@ -1,5 +1,5 @@
 /*
-(c) Vasian CEPA, http://madebits.com
+(c) Vasian CEPA
 */
 %{
 
@@ -232,7 +232,7 @@ command : LIST			{ list_table();	}
 int main(int argc, char** argv){
 	int i, r;
 	fprintf(stderr, "*** complex calculus calculator ***\n");
-	fprintf(stderr, "(c) Vasian CEPA, http://madebits.com\n\n");
+	fprintf(stderr, "(c) Vasian CEPA\n\n");
 	for(i = 1; i < argc; i++){
 		char *arg = argv[i];
 		if('-' == arg[0]){
@@ -291,6 +291,6 @@ void showAbout(void){
 	puts("   //  /  //  // //   \\ //    //  /");
 	puts("  //     //__// //     //  o //");
 	puts(" //___/ //     //___/ // \\  //___/");
- 	puts("(c) Vasian CEPA, http://madebits.com");
+ 	puts("(c) Vasian CEPA");
  	puts("");
 }

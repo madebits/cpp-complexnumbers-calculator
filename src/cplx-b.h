@@ -1,5 +1,5 @@
 /*
-(c) Vasian CEPA, http://madebits.com
+(c) Vasian CEPA
 */
 #ifndef MY_CPLX_B_H
 #define MY_CPLX_B_H

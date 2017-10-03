@@ -1,5 +1,5 @@
 /*
-(c) Vasian CEPA, http://madebits.com
+(c) Vasian CEPA
 */
 %{
 
